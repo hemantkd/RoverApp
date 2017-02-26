@@ -1,0 +1,5 @@
+C:\Practice\RoverApp-Hemant\RoverApp\bin\Debug\RoverApp.dll
+C:\Practice\RoverApp-Hemant\RoverApp\bin\Debug\RoverApp.pdb
+C:\Practice\RoverApp-Hemant\RoverApp\obj\Debug\RoverApp.csprojResolveAssemblyReference.cache
+C:\Practice\RoverApp-Hemant\RoverApp\obj\Debug\RoverApp.dll
+C:\Practice\RoverApp-Hemant\RoverApp\obj\Debug\RoverApp.pdb
