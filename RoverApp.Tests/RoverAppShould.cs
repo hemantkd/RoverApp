@@ -10,13 +10,15 @@ namespace RoverApp.Tests
 		{
 			// Arrange
 			var location = new Location(0,0);
-			var rover = new Rover(location, directionFacing: 'N');
+			var directionFacing = 'N';
+			var rover = new Rover(location, directionFacing);
 
 			// Act
 			rover.Navigate("F");
 
 			// Assert
 			Assert.AreEqual(1, rover.Location.YCoordinate);
+			Assert.AreEqual(directionFacing, rover.DirectionFacing);
 		}
 
 		[Test]
@@ -24,13 +26,15 @@ namespace RoverApp.Tests
 		{
 			// Arrange
 			var location = new Location(0,1);
-			var rover = new Rover(location, directionFacing: 'E');
+			var directionFacing = 'E';
+			var rover = new Rover(location, directionFacing);
 
 			// Act
 			rover.Navigate("F");
 
 			// Assert
 			Assert.AreEqual(1, rover.Location.XCoordinate);
+			Assert.AreEqual(directionFacing, rover.DirectionFacing);
 		}
 
 		[Test]
@@ -38,13 +42,15 @@ namespace RoverApp.Tests
 		{
 			// Arrange
 			var location = new Location(1,1);
-			var rover = new Rover(location, directionFacing: 'S');
+			var directionFacing = 'S';
+			var rover = new Rover(location, directionFacing);
 
 			// Act
 			rover.Navigate("F");
 
 			// Assert
 			Assert.AreEqual(0, rover.Location.YCoordinate);
+			Assert.AreEqual(directionFacing, rover.DirectionFacing);
 		}
 
 		[Test]
@@ -52,13 +58,15 @@ namespace RoverApp.Tests
 		{
 			// Arrange
 			var location = new Location(1,0);
-			var rover = new Rover(location, directionFacing: 'W');
+			var directionFacing = 'W';
+			var rover = new Rover(location, directionFacing);
 
 			// Act
 			rover.Navigate("F");
 
 			// Assert
 			Assert.AreEqual(0, rover.Location.XCoordinate);
+			Assert.AreEqual(directionFacing, rover.DirectionFacing);
 		}
     }
 }
