@@ -6,9 +6,29 @@
 	    public int YCoordinate { get; set; }
 	    public char DirectionFacing { get; set; }
 
-	    public void MoveForward()
+	    public void ExecuteCommand(string commands)
 	    {
-			    YCoordinate++;
+		    foreach (char command in commands)
+		    {
+			    if (command == 'F')
+			    {
+				    MoveForward();
+			    }
+		    }
+	    }
+
+	    private void MoveForward()
+	    {
+		    switch (DirectionFacing)
+		    {
+				case 'N':
+				    YCoordinate++;
+					break;
+
+				case 'E':
+				    XCoordinate++;
+					break;
+		    }
 	    }
     }
 }
