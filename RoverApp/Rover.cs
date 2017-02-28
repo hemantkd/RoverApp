@@ -11,24 +11,24 @@
 
 	    public void Navigate(string commands)
 	    {
-		    foreach (char command in commands)
+		    foreach (char command in commands.ToUpperInvariant())
 		    {
-			    if (char.ToUpper(command).Equals('F'))
+			    if (command.Equals('F'))
 			    {
 				    MoveForward();
 			    }
 
-			    if (char.ToUpper(command).Equals('B'))
+			    if (command.Equals('B'))
 			    {
 				    MoveBackward();
 			    }
 
-			    if (char.ToUpper(command).Equals('R'))
+			    if (command.Equals('R'))
 			    {
 				    TurnRight();
 			    }
 
-			    if (char.ToUpper(command).Equals('L'))
+			    if (command.Equals('L'))
 			    {
 				    TurnLeft();
 			    }

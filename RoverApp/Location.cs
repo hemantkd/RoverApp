@@ -11,7 +11,7 @@
 
 		public int XCoordinate { get; private set; }
 		public int YCoordinate { get; private set; }
-	    public char DirectionFacing { get; private set; }
+	    public char DirectionFacing { get; private set; } //TODO: Could refactor this to enum Direction.
 
 		public void MoveForward()
 		{
@@ -57,6 +57,7 @@
 		    }
 		}
 
+		//TODO: Make this method an extension to enum Direction
 		public void RotateRight()
 		{
 			switch (DirectionFacing)
@@ -79,6 +80,7 @@
 		    }
 		}
 
+		//TODO: Make this method an extention to enum Direction as well.
 		public void RotateLeft()
 		{
 			switch (DirectionFacing)
