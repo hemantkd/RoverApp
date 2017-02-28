@@ -22,6 +22,16 @@
 			    {
 				    MoveBackward();
 			    }
+
+			    if (char.ToUpper(command).Equals('R'))
+			    {
+				    TurnRight();
+			    }
+
+			    if (char.ToUpper(command).Equals('L'))
+			    {
+				    TurnLeft();
+			    }
 		    }
 	    }
 
@@ -34,5 +44,15 @@
 	    {
 		    Location.MoveBackward();
 	    }
-    }
+
+	    private void TurnRight()
+	    {
+		    Location.RotateRight();
+	    }
+
+	    private void TurnLeft()
+	    {
+		    Location.RotateLeft();
+	    }
+   }
 }

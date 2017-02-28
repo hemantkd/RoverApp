@@ -56,5 +56,49 @@
 					break;
 		    }
 		}
+
+		public void RotateRight()
+		{
+			switch (DirectionFacing)
+		    {
+				case 'N':
+				    DirectionFacing = 'E';
+					break;
+
+				case 'E':
+				    DirectionFacing = 'S';
+					break;
+
+				case 'S':
+				    DirectionFacing = 'W';
+					break;
+
+				case 'W':
+				    DirectionFacing = 'N';
+					break;
+		    }
+		}
+
+		public void RotateLeft()
+		{
+			switch (DirectionFacing)
+		    {
+				case 'N':
+				    DirectionFacing = 'W';
+					break;
+
+				case 'W':
+				    DirectionFacing = 'S';
+					break;
+
+				case 'S':
+				    DirectionFacing = 'E';
+					break;
+
+				case 'E':
+				    DirectionFacing = 'N';
+					break;
+		    }
+		}
 	}
 }

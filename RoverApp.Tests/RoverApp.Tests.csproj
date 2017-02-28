@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RoverAppShouldMoveBackwardByOneGrid.cs" />
+    <Compile Include="RoverAppShouldRotateLeftAndFace.cs" />
+    <Compile Include="RoverAppShouldBeAt.cs" />
+    <Compile Include="RoverAppShouldRotateRightAndFace.cs" />
     <Compile Include="RoverAppShouldMoveForwardByOneGrid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
