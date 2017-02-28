@@ -27,46 +27,12 @@
 
 	    private void MoveForward()
 	    {
-		    switch (Location.DirectionFacing)
-		    {
-				case 'N':
-				    Location.YCoordinate++;
-					break;
-
-				case 'E':
-				    Location.XCoordinate++;
-					break;
-
-				case 'S':
-				    Location.YCoordinate--;
-					break;
-
-				case 'W':
-				    Location.XCoordinate--;
-					break;
-		    }
+		    Location.MoveForward();
 	    }
 
 	    private void MoveBackward()
 	    {
-		    switch (Location.DirectionFacing)
-		    {
-				case 'N':
-				    Location.YCoordinate--;
-					break;
-
-				case 'E':
-				    Location.XCoordinate--;
-					break;
-
-				case 'S':
-				    Location.YCoordinate++;
-					break;
-
-				case 'W':
-				    Location.XCoordinate++;
-					break;
-		    }
+		    Location.MoveBackward();
 	    }
     }
 }

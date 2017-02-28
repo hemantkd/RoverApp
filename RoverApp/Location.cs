@@ -9,8 +9,52 @@
 			DirectionFacing = directionFacing;
 		}
 
-		public int XCoordinate { get; set; }
-		public int YCoordinate { get; set; }
+		public int XCoordinate { get; private set; }
+		public int YCoordinate { get; private set; }
 	    public char DirectionFacing { get; private set; }
+
+		public void MoveForward()
+		{
+			switch (DirectionFacing)
+		    {
+				case 'N':
+				    YCoordinate++;
+					break;
+
+				case 'E':
+				    XCoordinate++;
+					break;
+
+				case 'S':
+				    YCoordinate--;
+					break;
+
+				case 'W':
+				    XCoordinate--;
+					break;
+		    }
+		}
+
+		public void MoveBackward()
+		{
+			switch (DirectionFacing)
+		    {
+				case 'N':
+				    YCoordinate--;
+					break;
+
+				case 'E':
+				    XCoordinate--;
+					break;
+
+				case 'S':
+				    YCoordinate++;
+					break;
+
+				case 'W':
+				    XCoordinate++;
+					break;
+		    }
+		}
 	}
 }
