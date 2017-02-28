@@ -2,14 +2,12 @@
 {
     public class Rover
     {
-	    public Rover(Location location, char directionFacing)
+	    public Rover(Location location)
 	    {
 		    Location = location;
-		    DirectionFacing = directionFacing;
 	    }
 
 		public Location Location { get; private set; }
-	    public char DirectionFacing { get; private set; }
 
 	    public void Navigate(string commands)
 	    {
@@ -19,12 +17,17 @@
 			    {
 				    MoveForward();
 			    }
+
+			    if (char.ToUpper(command).Equals('B'))
+			    {
+				    MoveBackward();
+			    }
 		    }
 	    }
 
 	    private void MoveForward()
 	    {
-		    switch (DirectionFacing)
+		    switch (Location.DirectionFacing)
 		    {
 				case 'N':
 				    Location.YCoordinate++;
@@ -40,6 +43,28 @@
 
 				case 'W':
 				    Location.XCoordinate--;
+					break;
+		    }
+	    }
+
+	    private void MoveBackward()
+	    {
+		    switch (Location.DirectionFacing)
+		    {
+				case 'N':
+				    Location.YCoordinate--;
+					break;
+
+				case 'E':
+				    Location.XCoordinate--;
+					break;
+
+				case 'S':
+				    Location.YCoordinate++;
+					break;
+
+				case 'W':
+				    Location.XCoordinate++;
 					break;
 		    }
 	    }
